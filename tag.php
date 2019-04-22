@@ -15,23 +15,39 @@
 get_header(); ?>
 
 <div class="row mt-5 w-100">
-  <div class="col-lg-4 col-md-12 my-5 mx-3 bg-dark bg-fade text-white text-center">
-    <h2 class="text-uppercase"><?php echo get_option( 'custom-blog-page-title' ); ?></h2>
-    <p>
-      <?php echo get_option( 'custom-blog-page-subtitle' ); ?>
-    </p>
-    <div>
-      <?php
-      $tags = get_tags(array(
-        'hide_empty' => true
-      ));
-      echo '<div class="text-center mt-5">';
-      echo '<button class="btn fil-cat mr-1 mb-1" href="" data-rel="all">#ALL</button>';
-      foreach ($tags as $tag) {
-        echo '<button class="btn fil-cat mr-1 mb-1" href="" data-rel="' . $tag->slug . '">#' . $tag->name . '</button>';
-      }
-      echo '</div>';
+  <div class="col-lg-4 col-md-12 my-5 mx-3 bg-dark bg-fade text-white">
+    <?php
+    $tags = get_the_tags();
+    $html_tag = '<a href="' . get_tag_link($tags[0]->term_id) . '"> #' . $tags[0]->name . '</a>';
+    echo '<div>Currently displaying blog posts tagged with' . $html_tag . '</div>';
+    ?>
+
+    <div class="mt-5">
+      Other tags that might be interesting for you:
+      <br />
+      <?php $args = array(
+        	'smallest'                  => 8,
+        	'largest'                   => 22,
+        	'unit'                      => 'pt',
+        	'number'                    => 45,
+        	'format'                    => 'flat',
+        	'separator'                 => "\n",
+        	'orderby'                   => 'name',
+        	'order'                     => 'ASC',
+        	'exclude'                   => null,
+        	'include'                   => null,
+        	'topic_count_text_callback' => default_topic_count_text,
+        	'link'                      => 'view',
+        	'taxonomy'                  => 'post_tag',
+        	'echo'                      => true,
+        	'show_count'                => 0,
+        	'child_of'                  => null, // see Note!
+        );
+        wp_tag_cloud( $args );
       ?>
+    </div>
+    <div class="text-center mt-5">
+    <a href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>/blog"><< Go back to blog page to see and filter all posts.</a>
     </div>
   </div>
   <div class="col my-5 mx-3 bg-dark bg-fade no-overflow">

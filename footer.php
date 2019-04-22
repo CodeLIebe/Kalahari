@@ -33,4 +33,7 @@
     </div>
   </div> <!-- close .container-fluid -->
 </body>
+<!-- load js script -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="<?php bloginfo("template_directory"); ?>/js/searchfilter.js"></script>
 </html>
