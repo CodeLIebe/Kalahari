@@ -1,0 +1,148 @@
+// Global styling for this template
+@include local-font('Better Saturday', assets/fonts/BetterSaturday/BetterSaturday, null, null, ttf);
+@include local-font('DJ Holly Jolly', assets/fonts/DJHollyJolly/DJHollyJolly, null, null, ttf);
+@include local-font('Work Sans light', assets/fonts/WorkSans/WorkSans-Light, null, null, ttf);
+
+body {
+  @include body-font;
+  color: $dark-grey-dark-theme;
+  background: $soft-grey-dark-theme;
+}
+
+h1 {
+  @include highlight-font;
+  background: #curry;
+}
+
+h2 {
+  @include heading-font;
+}
+h3,
+h4,
+h5,
+h6 {
+  @include body-font;
+  font-weight: 700;
+  color: $dark-grey-dark-theme;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.tiny {
+  font-size: 70%;
+}
+
+.super-tiny {
+  font-size: 60%;
+}
+
+.display-6 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.h-80 {
+  height: 80%; }
+
+.h-65 {
+  height: 65%; }
+
+.h-35 {
+  height: 35%; }
+
+.h-20 {
+  height: 20%; }
+
+.vh-65 {
+  height: 65vh; }
+
+.vh-50 {
+  height: 50vh; }
+
+.vh-25 {
+  height: 25vh; }
+  .mh-6 {
+    height:6rem;
+  }
+
+.overflow {
+    overflow-y:auto; }
+
+.img {
+    z-index: 9999;
+}
+
+button#start_btn,
+button#answerButtonA,
+button#answerButtonB,
+button#answerButtonC,
+button#end_btn {
+  min-height: 0!important;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 320px) and (max-width: 992px) {
+     .overlay-img {
+  	   height: 100%!important;
+     }
+  	.overlay-content {
+  		padding: 1rem;
+  	}
+  	.modal-content {
+  		white-space: normal;
+  		word-wrap: break-word;
+  		transform: translate(50%, 10%)!important;
+  	}
+
+  	.mb-7 {
+  	   margin-bottom: 11rem!important; }
+
+  	.btn-primary{
+  	  min-height: 7rem;
+  	}
+    /* Quiz styles */
+    h2#questionText,
+    h2 {
+      font-size: 1.1rem;
+    }
+
+    button#start_btn,
+    button#answerButtonA,
+    button#answerButtonB,
+    button#answerButtonC,
+    button#end_btn {
+      font-size: .9rem;
+      min-height: 0!important;
+    }
+   }
+
+
+
+// Medium devices (tablets, 768px and up)
+@media(min-width: 768px) {
+  .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+  .dropdown-menu {
+    margin-top: 0 !important;
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }

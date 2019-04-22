@@ -1,0 +1,68 @@
+.bestseller {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  //display: inline-block;
+}
+
+.bestseller .overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 45%;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.bestseller:hover .overlay{
+  opacity: 1;
+}
+
+.overlay-img{
+  width: 100%;
+}
+
+.overlay-content {
+  position: absolute;
+//text-align: center;
+  //margin: 0 0 0 0;
+  width: 100%;
+  top: 75%;
+  left: 35%;
+  opacity: 0;
+  transform: translate(-30%, -50%);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.overlay-content h3,
+.overlay-content h4 {
+  @include heading-font;
+  color: $white;
+  font-weight: 400;
+}
+
+.overlay-content h4 {
+  //font-size: 90%;
+}
+
+.overlay-content p{
+  color: $white;
+}
+
+.bestseller:hover .overlay-content{
+  top: 75%;
+  left: 35%;
+  opacity: 1;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.fadeIn-left{
+  left: 20%;
+}

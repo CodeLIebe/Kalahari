@@ -1,0 +1,104 @@
+/*
+Theme Name: kalahari
+Theme URI: https://codnski.club/
+Author: Liz
+Author URI: https://codinski.club/
+Description: Simple Blog - take it or leave it
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kalahari
+Tags: plain vanilla blog theme - nothing fancy here
+This theme, like WordPress, is licensed under the GPL.
+
+body{
+  font-family: times, serif;
+}
+*/
+.full-page{
+  min-height: 100vh!important;
+}
+
+.no-overflow {
+  overflow-y: hidden;
+}
+
+.bg-fade{
+  opacity: .85;
+}
+
+.tiny {
+  font-size: .6rem;
+}
+
+a.tag-cloud-link:before {
+  content: "#";
+}
+
+a.credits{
+  color: #333;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+a.credits:hover {
+  color: #111;
+}
+
+/**
+ * Image Overlay
+ *
+ */
+ .blog-img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.blog-img .overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.blog-img:hover .overlay{
+  opacity: 1;
+}
+
+.overlay-img{
+  width: 100%;
+}
+
+.overlay-content {
+  position: absolute;
+  width: 100%;
+  top: 75%;
+  left: 35%;
+  opacity: 0;
+  transform: translate(-30%, -50%);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.blog-img:hover .overlay-content{
+  top: 45%;
+  left: 35%;
+  opacity: 1;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.fadeIn-left{
+  left: 20%;
+}
+
+.fadeIn-top{
+  top: 20%;
+}

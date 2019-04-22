@@ -1,0 +1,33 @@
+.navbar {
+  @include heading-font;
+}
+
+//link color
+a.nav-link,
+a.text-light {
+  color: $soft-grey-light-theme;
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($soft-grey-light-theme, 15%);
+    text-decoration: none;
+  }
+}
+
+.dropdown-item {
+  color: $dark-grey-light-theme;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: lighten($dark-grey-light-theme, 20%);
+    text-decoration: none;
+    background-color: transparent;
+  }
+}
+
+//remove blue/yellow outline when clicked on icon
+.navbar-toggler:focus, .navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
