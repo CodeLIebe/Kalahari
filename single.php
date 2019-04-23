@@ -21,16 +21,30 @@ get_header(); ?>
       <?php echo get_option( 'custom-blog-page-subtitle' ); ?>
     </p>
     <div class="text-center mt-5">
-    <a href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>/blog"><< Go back to blog page.</a>
+      <a href="<?php echo esc_url( get_bloginfo( 'url' ) ) ?>/blog"><< Go back to blog page.</a>
     </div>
   </div>
   <div class="col my-5 mx-3 bg-dark bg-fade no-overflow text-white">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+        // Get the ID of a given category
+        $cat_id = get_cat_ID( 'FAQ' );
+        // Get the URL of this category
+        $cat_link = get_category_link( $cat_id );
+        // if post is in category FAQ display back link
+        if(in_category($cat_id)){
+          echo '<a href=" ' . $cat_link . '" class="small"><< Go back to FAQ page.</a>';
+        }
        ?>
        <h1><?php the_title(); ?></h1>
        <p>
          <?php the_content(); ?>
        </p>
+       <?php
+       // if post is in category FAQ display back link
+       if(in_category($cat_id)){
+         echo '<a href=" ' . $cat_link . '" class="small"><< Go back to FAQ page.</a>';
+       }
+       ?>
     <?php endwhile;
     else :
        _e( 'Sorry, nothing to see here. Mind your own business, bro!', 'textdomain' );

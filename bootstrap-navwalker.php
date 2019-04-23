@@ -187,15 +187,15 @@ class Bootstrap_NavWalker extends Walker_Nav_Menu {
 		 * 3. Add the current menu id attribute to indicate the exact menu to toggle for set in sub-menu div
 		 * 4. Add the attribute of 'true' for 'aria-haspopup' in parent menu to indicate it has sub-menus
 		 * 5. Add the attribute of 'false' for 'aria-expanded' in parent menu to indicate the sub-menus is hidden by default
-		 * 6. Add the '#' link in the <a> tag in the parent menu if it has sub-menu as required for Bootstrap
+		 * 6. Add the '#' link in the <a> tag in the parent menu if it has sub-menu as required for Bootstrap - crap add real link
 		 */
 		if ( $depth === 0 && in_array( 'menu-item-has-children', $classes ) ) {
 			$atts['class']         .= ' dropdown-toggle';
 			$atts['data-toggle']   = 'dropdown';
 			$atts['id']            = 'navbar-dropdown-menu-link-' . $item->ID;
 			$atts['aria-haspopup'] = "true";
-			$atts['aria-expanded'] = "false";
-			$atts['href']          = '#';
+			$atts['aria-expanded'] = "true";
+			$atts['href']          = ! empty( $item->url ) ? $item->url : '';
 		}
 		/**
 		 * Add the attributes for <a> in sub-menu

@@ -60,7 +60,7 @@ function kalahari_widgets_init() {
 add_action( 'widgets_init', 'kalahari_widgets_init' );
 
 /**
- * Admin init
+ * Admin Settings init - BLOG
  *
  */
 add_action( 'admin_init', 'blog_settings_init' );
@@ -124,4 +124,66 @@ function blog_settings_field_text_callback($args)
     $value = get_option( $args[0] , '' );
     echo '<input type="text" id="'. $args[0] .'" name="'. $args[0] .'" value="' . $value . '" />';
 }
+
+/**
+ * Admin Settings init - FAQ
+ *
+ */
+add_action( 'admin_init', 'faq_settings_init' );
+
+/* Settings Init */
+function faq_settings_init(){
+
+    /* Register blog title Settings */
+    register_setting(
+        'reading',             // Options group
+        'custom-faq-page-title',      // Option name/database
+        'esc_attr' // sanitize callback function
+    );
+
+    /* Register blog subtitle Settings */
+    register_setting(
+        'reading',             // Options group
+        'custom-faq-page-subtitle',      // Option name/database
+        'esc_attr' // sanitize callback function
+    );
+
+    /* Create blog settings section */
+    add_settings_section(
+        'faq_section',                   // Section ID
+        'Additional FAQ Page Settings',  // Section title
+        'faq_settings_section_description', // Section callback function
+        'reading'                          // Settings page slug
+    );
+
+    /* Create blog title settings field */
+    add_settings_field(
+        'custom-faq-page-title',       // Field ID
+        'FAQ Page Title',       // Field title
+        'blog_settings_field_text_callback', // Field callback function
+        'reading',                    // Settings page slug
+        'faq_section',               // Section ID
+        array(
+            'custom-faq-page-title'  // $args for callback
+        )
+    );
+    /* Create blog subtitle settings field */
+    add_settings_field(
+        'custom-faq-page-subtitle',       // Field ID
+        'FAQ Page Subtitle',       // Field title
+        'blog_settings_field_text_callback', // Field callback function
+        'reading',                    // Settings page slug
+        'faq_section',               // Section ID
+        array(
+            'custom-faq-page-subtitle'  // $args for callback
+        )
+    );
+}
+
+/* Setting Section Description */
+function faq_settings_section_description(){
+    echo wpautop( "Insert Settings to display on FAQ page." );
+}
+
+
 ?>
