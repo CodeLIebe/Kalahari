@@ -19,11 +19,14 @@
 	<?php endif; ?>
 	<link rel="icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/img/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/img/favicon.ico" type="image/x-icon" />
+	<!-- Integrate Bootstrap 4 -->
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  />
+	<!-- Integrate Theme Stylesheets -->
   <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/style.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/css/searchfilter.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/css/imgoverlay.css" />
-	<!-- Fontawesom to integrate icons -->
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/css/form.css" />
+	<!-- Fontawesome to integrate icons -->
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<?php wp_head(); ?>
 </head>

@@ -186,4 +186,65 @@ function faq_settings_section_description(){
 }
 
 
+/**
+ * Admin Settings init - Front Page
+ *
+ */
+add_action( 'admin_init', 'front_page_settings_init' );
+
+/* Settings Init */
+function front_page_settings_init(){
+
+    /* Register blog title Settings */
+    register_setting(
+        'reading',             // Options group
+        'custom-front-page-title',      // Option name/database
+        'esc_attr' // sanitize callback function
+    );
+
+    /* Register blog subtitle Settings */
+    register_setting(
+        'reading',             // Options group
+        'custom-front-page-subtitle',      // Option name/database
+        'esc_attr' // sanitize callback function
+    );
+
+    /* Create blog settings section */
+    add_settings_section(
+        'front_page_section',                   // Section ID
+        'Additional Front Page Settings',  // Section title
+        'front_page_settings_section_description', // Section callback function
+        'reading'                          // Settings page slug
+    );
+
+    /* Create blog title settings field */
+    add_settings_field(
+        'custom-front-page-title',       // Field ID
+        'Front Page Title',       // Field title
+        'blog_settings_field_text_callback', // Field callback function
+        'reading',                    // Settings page slug
+        'front_page_section',               // Section ID
+        array(
+            'custom-front-page-title'  // $args for callback
+        )
+    );
+    /* Create blog subtitle settings field */
+    add_settings_field(
+        'custom-front-page-subtitle',       // Field ID
+        'Front Page Subtitle',       // Field title
+        'blog_settings_field_text_callback', // Field callback function
+        'reading',                    // Settings page slug
+        'front_page_section',               // Section ID
+        array(
+            'custom-front-page-subtitle'  // $args for callback
+        )
+    );
+}
+
+/* Setting Section Description */
+function front_page_settings_section_description(){
+    echo wpautop( "Insert Settings to display on Front page." );
+}
+
+
 ?>

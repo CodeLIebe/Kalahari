@@ -23,7 +23,7 @@
             <?php endif; ?>
 
         <div class="row">
-            <div class="col text-center tiny text-muted pt-1">
+            <div class="col text-center tiny bg-dark text-muted pt-1">
           		<a href="<?php echo esc_url( __( 'https://codinski.club/', 'codinski' ) ); ?>" target="_blank" class="credits">
           			<?php printf( __( 'Handmade with <i class="fa fa-magic" aria-hidden="true" title="magic"></i> by %s', 'codinski' ), 'Liz' ); ?>
           		</a>

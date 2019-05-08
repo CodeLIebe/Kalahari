@@ -31,15 +31,20 @@ body{
   font-size: .6rem;
 }
 
+.spacing {
+  min-height: 35rem;
+  padding-top: 15rem;
+}
+
 a.tag-cloud-link:before {
   content: "#";
 }
 
 a.credits{
-  color: #333;
+  color: #666;
   text-transform: uppercase;
   text-decoration: none;
 }
 a.credits:hover {
-  color: #111;
+  color: #888;
 }
