@@ -16,10 +16,12 @@ get_header(); ?>
 
 <div class="row mt-5 w-100">
   <div class="col-lg-4 col-md-12 my-5 mx-3 bg-dark bg-fade text-white text-center">
-    <h2 class="text-uppercase mt-2"><?php echo get_option( 'custom-faq-page-title' ); ?></h2>
-    <p>
-      <?php echo get_option( 'custom-faq-page-subtitle' ); ?>
-    </p>
+    <h1 class="text-uppercase mt-2">
+      <?php echo get_option('kalahari_theme_options')['faq_page_title']; ?>
+    </h1>
+    <h2>
+      <?php echo get_option('kalahari_theme_options')['faq_page_subtitle']; ?>
+    </h2>
   </div>
   <div class="col my-5 mx-3 bg-dark bg-fade no-overflow">
     <div class="row">

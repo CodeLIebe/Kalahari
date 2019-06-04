@@ -17,8 +17,8 @@
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>">
 	<?php endif; ?>
-	<link rel="icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/img/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/img/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/img/bird.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/img/bird.ico" type="image/x-icon" />
 	<!-- Integrate Bootstrap 4 -->
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  />
 	<!-- Integrate Theme Stylesheets -->
@@ -46,9 +46,12 @@
 			>
 			<div class="row w-100">
 				<div class="col">
-					<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top text-uppercase">
+					<nav class="navbar navbar-expand-lg py-0 navbar-light bg-light fixed-top text-uppercase">
 							<a class="navbar-brand" href="<?php echo esc_url( get_site_url() ); ?>">
-						    <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/img/favicon.ico" width="30" height="30" alt="<?php bloginfo( 'name' ); ?>">
+								<sec class="logo">
+									<?php bloginfo( 'name' ); ?>
+								</sec>
+						    <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/img/bird_60.png" alt="<?php bloginfo( 'name' ); ?>">
 						  </a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
 							<span class="navbar-toggler-icon"></span>

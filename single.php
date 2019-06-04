@@ -15,16 +15,18 @@
 get_header(); ?>
 
 <div class="row mt-5 w-100">
-  <div class="col-lg-4 col-md-12 my-5 mx-3 bg-dark bg-fade text-white text-center">
-    <h2 class="text-uppercase"><?php echo get_option( 'custom-blog-page-title' ); ?></h2>
-    <p>
-      <?php echo get_option( 'custom-blog-page-subtitle' ); ?>
-    </p>
+  <div class="col-lg-4 col-md-12 my-lg-5 mx-3 bg-dark bg-fade text-white text-center">
+    <h1 class="text-uppercase mt-2">
+      <?php echo get_option('kalahari_theme_options')['blog_page_title']; ?>
+    </h1>
+    <h2 class="blog-title">
+      <?php echo get_option('kalahari_theme_options')['blog_page_subtitle']; ?>
+    </h2>
     <div class="text-center mt-5">
       <a href="<?php echo esc_url( get_bloginfo( 'url' ) ) ?>/blog"><< Go back to blog page.</a>
     </div>
   </div>
-  <div class="col my-5 mx-3 bg-dark bg-fade no-overflow text-white">
+  <div class="col-lg-7 col-md-12 my-5 mx-3 bg-dark bg-fade no-overflow text-white">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
         // Get the ID of a given category
         $cat_id = get_cat_ID( 'FAQ' );

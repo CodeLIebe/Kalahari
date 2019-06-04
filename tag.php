@@ -18,16 +18,16 @@ get_header(); ?>
   <div class="col-lg-4 col-md-12 my-5 mx-3 bg-dark bg-fade text-white">
     <?php
     $tags = get_the_tags();
-    $html_tag = '<a href="' . get_tag_link($tags[0]->term_id) . '"> #' . $tags[0]->name . '</a>';
-    echo '<div>Currently displaying blog posts tagged with' . $html_tag . '</div>';
+    $html_tag = '<a href="' . get_tag_link($tags[0]->term_id) . '" class="tag-cloud-link">' . $tags[0]->name . '</a>';
+    echo '<div>Currently displaying blog posts tagged with ' . $html_tag . '</div>';
     ?>
 
     <div class="mt-5">
       Other tags that might be interesting for you:
       <br />
       <?php $args = array(
-        	'smallest'                  => 8,
-        	'largest'                   => 22,
+        	'smallest'                  => 14,
+        	'largest'                   => 25,
         	'unit'                      => 'pt',
         	'number'                    => 45,
         	'format'                    => 'flat',

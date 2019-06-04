@@ -15,26 +15,33 @@
 get_header(); ?>
 
 <div class="row mt-5 w-100">
-  <div class="col-lg-4 col-md-12 my-5 mx-3 bg-dark bg-fade text-white text-center">
-    <h2 class="text-uppercase mt-2"><?php echo get_option( 'custom-blog-page-title' ); ?></h2>
-    <p>
-      <?php echo get_option( 'custom-blog-page-subtitle' ); ?>
-    </p>
+  <div class="col-lg-4 col-md-12 my-lg-5 mx-3 bg-dark bg-fade text-white text-center">
+    <h1 class="text-uppercase mt-2">
+      <?php echo get_option('kalahari_theme_options')['blog_page_title']; ?>
+    </h1>
+    <h2 class="blog-title">
+      <?php echo get_option('kalahari_theme_options')['blog_page_subtitle']; ?>
+    </h2>
     <div>
       <?php
       $tags = get_tags(array(
         'hide_empty' => true
       ));
-      echo '<div class="text-center mt-5">';
+      echo '<div class="text-center my-5">';
       echo '<button class="btn fil-cat mr-1 mb-1" href="" data-rel="all">SHOW ALL</button>';
+      echo '<button class="btn fil-cat mr-1 mb-1" href="" data-rel="faq">#Frequently Asked Questions</button>';
+      echo '<button class="btn fil-cat mr-1 mb-1" href="" data-rel="itineray">#Sample Itineraries</button>';
       foreach ($tags as $tag) {
         echo '<button class="btn fil-cat mr-1 mb-1" href="" data-rel="' . $tag->slug . '">#' . $tag->name . '</button>';
       }
       echo '</div>';
       ?>
     </div>
+    <div class="tripadvisor">
+      <?php // do_action( 'wprev_tripadvisor_plugin_action', 2 ); ?>
+    </div>
   </div>
-  <div class="col my-5 mx-3 bg-dark bg-fade no-overflow">
+  <div class="col-lg-7 col-md-12 my-5 mx-3 bg-dark bg-fade no-overflow">
     <div class="row">
       <div id="portfolio" class="col">
       <?php

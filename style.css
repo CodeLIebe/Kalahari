@@ -1,6 +1,6 @@
 /*
 Theme Name: kalahari
-Theme URI: https://codnski.club/
+Theme URI: https://codinski.club/
 Author: Liz
 Author URI: https://codinski.club/
 Description: Simple Blog - take it or leave it
@@ -10,11 +10,140 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kalahari
 Tags: plain vanilla blog theme - nothing fancy here
 This theme, like WordPress, is licensed under the GPL.
-
-body{
-  font-family: times, serif;
-}
 */
+
+/*
+ * Include local fonts
+ *
+ */
+@font-face {
+    font-family: 'ombudsman_stencil';
+    src: url('fonts/ombudsmanstencil-webfont.eot');
+    src: url('fonts/ombudsmanstencil-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ombudsmanstencil-webfont.woff2') format('woff2'),
+         url('fonts/ombudsmanstencil-webfont.woff') format('woff'),
+         url('fonts/ombudsmanstencil-webfont.ttf') format('truetype'),
+         url('fonts/ombudsmanstencil-webfont.svg#ombudsman_stencilregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'better_saturday';
+    src: url('fonts/better_saturday-webfont.eot');
+    src: url('fonts/better_saturday-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/better_saturday-webfont.woff2') format('woff2'),
+         url('fonts/better_saturday-webfont.woff') format('woff'),
+         url('fonts/better_saturday-webfont.ttf') format('truetype'),
+         url('fonts/better_saturday-webfont.svg#better_saturdayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'agrem';
+    src: url('fonts/agrem-webfont.eot');
+    src: url('fonts/agrem-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/agrem-webfont.woff2') format('woff2'),
+         url('fonts/agrem-webfont.woff') format('woff'),
+         url('fonts/agrem-webfont.ttf') format('truetype'),
+         url('fonts/agrem-webfont.svg#agremregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/*
+ * Basic Font Styles
+ *
+ */
+
+ h1{
+   font-family: 'ombudsman_stencil', sans-serif;
+   font-size: 3rem;
+ }
+
+ h1.front-page-title {
+   font-size: 8rem;
+ }
+
+ h2,
+ h1.handwritten {
+   font-family: 'better_saturday', sans-serif;
+   font-size: 2.7rem;
+ }
+
+ h2.front-page-title {
+   font-size: 5rem;
+ }
+
+ h3 {
+   font-family: 'ombudsman_stencil', sans-serif;
+   font-size: 2rem;
+ }
+ h3.blog-title {
+   font-family: 'better_saturday', sans-serif;
+
+ }
+
+ /*
+  * Custom Stackable Accordion Style
+  *
+  */
+.ugb-accordion__heading {
+  background: transparent!important;
+  padding: 0.2rem!important;
+  font-family: 'ombudsman_stencil', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  line-height: 1.2rem;
+ }
+
+ /*
+  * Custom Link/Menu Styles
+  *
+  */
+ a {
+   color: #dd7907;
+ }
+ a:hover {
+   color: #f89525;
+   text-decoration: none;
+ }
+a.nav-link {
+  font-family: 'agrem', sans-serif;
+  font-size: 1.8rem;
+}
+sec.logo {
+  font-family: 'ombudsman_stencil', sans-serif;
+  font-size: 1.4rem;
+}
+sec.logo-sub {
+  font-family: 'better_saturday', sans-serif;
+  text-transform: none;
+  font-size: 1rem;
+}
+
+a.tag-cloud-link {
+  font-family: 'agrem', sans-serif;
+}
+
+a.tag-cloud-link:before {
+  content: "#";
+}
+
+a.credits{
+  color: #666;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+a.credits:hover {
+  color: #888;
+}
+
+/*
+ * Custom classes
+ *
+ */
 .full-page{
   min-height: 100vh!important;
 }
@@ -32,19 +161,49 @@ body{
 }
 
 .spacing {
-  min-height: 35rem;
-  padding-top: 15rem;
+  min-height: 34rem;
+  padding-top: 8rem;
 }
 
-a.tag-cloud-link:before {
-  content: "#";
+.mt-10 {
+  margin-top: 10rem;
+}
+.navbar {
+  margin-bottom: 5rem;
 }
 
-a.credits{
-  color: #666;
-  text-transform: uppercase;
-  text-decoration: none;
+/*
+ * TripAdvisor Rating Stylesheets
+ *
+ */
+
+#CDSRATINGWIDGET617,
+.cdsROW.narrow {
+  width: 100%!important;
+  top: -1rem;
 }
-a.credits:hover {
-  color: #888;
-}
+
+
+/*
+ * Media Breakpoints
+ *
+ * Extra small devices (portrait phones, less than 576px)
+ * Small devices (landscape phones, less than 768px)
+ * Medium devices (tablets, less than 992px)
+ * Large devices (desktops, less than 1200px)
+ * Extra large devices (large desktops)
+ * No media query for `xs` since this is the default in Bootstrap
+ * No media query since the extra-large breakpoint has no upper bound on its width
+ */
+
+ @media (max-width: 575.98px) { ... }
+
+ @media (max-width: 767.98px) { ... }
+
+ @media (max-width: 991.98px) {
+   .mt-10 {
+      margin-top: 2rem;
+    }
+  }
+
+ @media (max-width: 1199.98px) { ... }
