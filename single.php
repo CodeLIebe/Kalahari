@@ -15,7 +15,7 @@
 get_header(); ?>
 
 <div class="row mt-5 w-100">
-  <div class="col-lg-4 col-md-12 my-lg-5 mx-3 bg-dark bg-fade text-white text-center">
+  <div class="col-lg-4 col-md-12 my-lg-5 mx-3 h-50 bg-dark bg-fade text-white text-center">
     <h1 class="text-uppercase mt-2">
       <?php echo get_option('kalahari_theme_options')['blog_page_title']; ?>
     </h1>

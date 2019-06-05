@@ -60,7 +60,7 @@ function kalahari_widgets_init() {
 			'name'          => __( 'Partner', 'kalahari' ),
 			'id'            => 'sidebar-partner',
 			'description'   => __( 'Add widgets here to appear in your partner sidebar.', 'kalahari' ),
-			'before_widget' => '<div id="%1$s" class="col widget %2$s">',
+			'before_widget' => '<div id="%1$s" class="col-lg col-md-2 col-4 widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="pt-0">',
 			'after_title'   => '</h2>',

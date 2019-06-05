@@ -30,7 +30,7 @@ get_header(); ?>
       echo '<div class="text-center my-5">';
       echo '<button class="btn fil-cat mr-1 mb-1" href="" data-rel="all">SHOW ALL</button>';
       echo '<button class="btn fil-cat mr-1 mb-1" href="" data-rel="faq">#Frequently Asked Questions</button>';
-      echo '<button class="btn fil-cat mr-1 mb-1" href="" data-rel="itineray">#Sample Itineraries</button>';
+      echo '<button class="btn fil-cat mr-1 mb-1" href="" data-rel="itinerary">#Sample Itineraries</button>';
       foreach ($tags as $tag) {
         echo '<button class="btn fil-cat mr-1 mb-1" href="" data-rel="' . $tag->slug . '">#' . $tag->name . '</button>';
       }
