@@ -17,9 +17,9 @@
   color: white;
   font-size: 1.2em;
   left: 0px;
-  padding: 1rem 1.2rem; //10px 15px;
+  padding: .5rem .8rem; //10px 15px;
   position: absolute;
-  transition: 0.5s padding;
+  transition: 0.9s padding;
   text-align: center;
   width: 100%;
 }
@@ -32,15 +32,15 @@
 }
 
 .imagebox:hover .imagebox-desc {
-  padding-bottom: 25%;
+  padding-bottom: 15%;
 }
 .imagebox:hover .imagebox-excerpt {
   display: inline;
-  font-size: .8em;
+  font-size: .7em;
 }
 
 h3.img-overlay{
   font-family: 'agrem', sans-serif;
   letter-spacing: .3rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }

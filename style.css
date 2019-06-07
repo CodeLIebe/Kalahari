@@ -18,6 +18,7 @@ This theme, like WordPress, is licensed under the GPL.
  */
 @font-face {
     font-family: 'ombudsman_stencil';
+    font-display: auto;
     src: url('fonts/ombudsmanstencil-webfont.eot');
     src: url('fonts/ombudsmanstencil-webfont.eot?#iefix') format('embedded-opentype'),
          url('fonts/ombudsmanstencil-webfont.woff2') format('woff2'),
@@ -29,6 +30,7 @@ This theme, like WordPress, is licensed under the GPL.
   }
 @font-face {
     font-family: 'better_saturday';
+    font-display: auto;
     src: url('fonts/better_saturday-webfont.eot');
     src: url('fonts/better_saturday-webfont.eot?#iefix') format('embedded-opentype'),
          url('fonts/better_saturday-webfont.woff2') format('woff2'),
@@ -40,6 +42,7 @@ This theme, like WordPress, is licensed under the GPL.
   }
 @font-face {
     font-family: 'agrem';
+    font-display: auto;
     src: url('fonts/agrem-webfont.eot');
     src: url('fonts/agrem-webfont.eot?#iefix') format('embedded-opentype'),
          url('fonts/agrem-webfont.woff2') format('woff2'),

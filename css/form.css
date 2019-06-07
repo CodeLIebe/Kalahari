@@ -21,6 +21,11 @@ button:focus {
   outline: none;
 }
 
+input.wpcf7-form-control.wpcf7-submit{
+  font-family: 'agrem', sans-serif!important;
+  font-size: 2rem!important;
+}
+
 ::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.65);
 }
